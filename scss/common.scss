@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+@import "compass";
+
+//---------------------------------
+//	mixin
+//---------------------------------
+@mixin fontsize($size, $base: 16) {
+	font-size:$size + px;
+	font-size: ($size / $base) * 1rem;
+}
+
+@mixin absPosition ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	content: "";
+	display: block;
+}
+
+/* ---------------------------------
+	common set
+---------------------------------- */
+
+body {
+	font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+/* 	background: url(../images/bg01.jpg) no-repeat center top;
+	background-size: 100% auto; */
+}
+
+/* ---------------------------------
+	heading
+---------------------------------- */
+h1 { 
+	@include fontsize(36);
+}
+h2 {
+	@include fontsize(24);
+	position: relative;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 15px;
+	padding: 20px;
+	&::after {
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		content: '';
+		width: 20%;
+		border-bottom: 2px solid #205887;
+	}
+}
+h3 {
+	padding: 10px 0;
+	margin-bottom: 15px;
+}
+
+
+/* ---------------------------------
+	header
+---------------------------------- */
+#header {
+	width: 1240px;
+	margin: 0 auto;
+}
+/* ---------------------------------
+	nav
+---------------------------------- */
+nav {
+	ul {
+		display: table;
+		width: 100%;
+		text-align: center;
+		overflow: hidden;
+	}
+	li {
+		display: table-cell;
+		vertical-align: middle;
+		& a {
+			color: #3E3A39;
+			text-decoration: none;
+		}
+		&.current, &:hover {
+			background: url(../images/nav_border.png) no-repeat center 70%;
+		}
+	}
+}
+
+/* ---------------------------------
+	Breadcrumb
+---------------------------------- */
+#breadcrumb{
+	margin-bottom: 20px;
+}
+#breadcrumb li{
+	float: left;
+	margin-right: .5em;
+}
+
+/* ---------------------------------
+	page-top
+---------------------------------- */
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 300px;
+    font-size: 77%;
+    z-index: 1;
+}
+#page-top a {
+    background: #666;
+    width: 66px;
+    height: 64px;
+    display: block;
+    background: url(../images/page_top.png);
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------
+	footer
+---------------------------------- */
+#footer {
+	@include fontsize(18);
+	background: url(../images/footer_top.png) no-repeat center top;
+	padding-top: 66px;
+	width: 100%;
+	.contentWp {
+		background: #DCECD7;
+		padding-top: 65px;
+		.content {
+			width: 1240px;
+			margin: 0 auto;
+			.store {
+				width: 33%;
+				padding: 0 0 40px 65px;
+				display: inline-block;
+				line-height: 1.5;
+				span {
+					@include fontsize(13);
+					display: block;
+					+ span {
+						@include fontsize(14);
+					}
+				}
+				a {
+					color: #ECAA39;
+					text-decoration: none;
+				}
+			}
+			.dtLine {
+				text-align: center;
+			}
+			.ft_link {
+				width: 1150px;
+				margin: 0 auto;
+				padding-top: 50px;
+				.induction {
+					width: 100%;
+					.leadArea {
+						width: 178px;
+						float: left;
+					}
+					ul {
+						padding-left: 180px;
+					}
+					li {
+						display: inline-block;
+						padding-left: 50px;
+						vertical-align: top;
+						a { 
+							text-decoration: none;
+							color: #3E3A39;
+						}
+						ul {
+							line-height: 1.5em;
+							padding: 0;
+							position: relative;
+							margin-top: .75em;
+							margin-left: 1.5em;
+							margin-bottom: 50px;
+							&:before {
+								@include absPosition;
+								top: 0;
+								bottom: 13px;
+								left: 0;
+								width: 0;
+								border-left: 1px solid #333;
+							}
+							li {
+								position: relative;
+								padding-left: 20px;
+								display: block;
+								&:before {
+									@include absPosition;
+									top: 15px;
+									left: 0;
+									width: .75em;
+									height: 0;
+									border-top: 1px solid #333;
+								}
+								&:last-child:before {
+									top: 15px;
+									bottom: 0;
+									height: auto;
+								}
+								a {
+									@include fontsize(16);
+								}
+							}
+						}
+					}
+				}
+				.ft_under{
+					text-align: center;
+					background: url(../images/logo_under.png) no-repeat left bottom;
+					height: 195px;
+					position: relative;
+					.copy {
+						padding-top: 130px;
+						color: #595757;
+					}
+					.ft_sns{
+						@include absPosition;
+						background: url(../images/ft_sns.png) no-repeat ;
+						right: -70px;
+						bottom: 0;
+						width: 369px;
+						height: 156px;
+						ul{
+							padding-top: 75px;
+							margin-left: -50px;
+						}
+						li {
+							display: inline-block;
+							vertical-align: top;
+						}
+					}
+				}
+			}
+		}
+	}
+}

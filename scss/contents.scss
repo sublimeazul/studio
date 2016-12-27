@@ -1,0 +1,474 @@
+@charset "UTF-8";
+
+@import "compass";
+
+//---------------------------------
+//	mixin
+//---------------------------------
+@mixin fontsize($size, $base: 16) {
+	font-size:$size + px;
+	font-size: ($size / $base) * 1rem;
+}
+
+@mixin absPosition ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	content: "";
+	display: block;
+}
+/* ---------------------------------
+	mainImg
+---------------------------------- */
+#mainImg{
+	width: 1240px;
+	margin: 0 auto;
+	/* background: url(../images/flame.png) no-repeat center top; */
+}
+
+/* ---------------------------------
+	stream
+---------------------------------- */
+#stream {
+	margin-bottom: 100px;
+	overflow: hidden;
+}
+
+/* ---------------------------------
+	notonly
+---------------------------------- */
+#notonly {
+	@include fontsize(18);
+	background: url(../images/notonly_top.png) no-repeat center top;
+	padding-top: 66px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 100px;
+	h3 {
+		position: absolute;
+		left: 950px;
+		top: -35px;
+	}
+	.contents {
+		background: #D8EEFB;
+		padding-top: 30px;
+		h4 {
+			margin-left: 560px;
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.store {
+			width: 33%;
+			padding: 0 0 40px 65px;
+			display: inline-block;
+			line-height: 1.5;
+			span {
+				@include fontsize(13);
+				display: block;
+				+ span {
+					@include fontsize(14);
+				}
+			}
+			a {
+				color: #ECAA39;
+				text-decoration: none;
+			}
+		}
+		.dtLine {
+			text-align: center;
+		}
+		.ft_link {
+			width: 1150px;
+			margin: 0 auto;
+			padding-top: 50px;
+			.induction {
+				width: 100%;
+				.leadArea {
+					width: 178px;
+					float: left;
+				}
+				ul {
+					padding-left: 180px;
+				}
+				li {
+					display: inline-block;
+					padding-left: 50px;
+					vertical-align: top;
+					a { 
+						text-decoration: none;
+						color: #3E3A39;
+					}
+					ul {
+						line-height: 1.5em;
+						padding: 0;
+						position: relative;
+						margin-top: .75em;
+						margin-left: 1.5em;
+						margin-bottom: 50px;
+						&:before {
+							@include absPosition;
+							top: 0;
+							bottom: 13px;
+							left: 0;
+							width: 0;
+							border-left: 1px solid #333;
+						}
+						li {
+							position: relative;
+							padding-left: 20px;
+							display: block;
+							&:before {
+								@include absPosition;
+								top: 15px;
+								left: 0;
+								width: .75em;
+								height: 0;
+								border-top: 1px solid #333;
+							}
+							&:last-child:before {
+								top: 15px;
+								bottom: 0;
+								height: auto;
+							}
+							a {
+								@include fontsize(16);
+							}
+						}
+					}
+				}
+			}
+			.ft_under{
+				text-align: center;
+				background: url(../images/logo_under.png) no-repeat left bottom;
+				height: 195px;
+				position: relative;
+				.copy {
+					padding-top: 130px;
+					color: #595757;
+				}
+				.ft_sns{
+					@include absPosition;
+					background: url(../images/ft_sns.png) no-repeat ;
+					right: -70px;
+					bottom: 0;
+					width: 369px;
+					height: 156px;
+					ul{
+						padding-top: 75px;
+						margin-left: -50px;
+					}
+					li {
+						display: inline-block;
+						vertical-align: top;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* ---------------------------------
+	about
+---------------------------------- */
+#about{
+	@include fontsize(20);
+	color: #595757;
+	background: url(../images/about_bg.png) no-repeat center top;
+	padding-bottom: 150px;
+	.contents {
+		width: 1240px;
+		margin: 0 auto;
+		h3 {
+			@include fontsize(24);
+			text-align: center;
+			span {
+				@include fontsize(12);
+			}
+		}
+		p {
+			line-height:2;
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		div {
+			display: inline-block;
+			vertical-align: top;
+			width: 575px;
+			height: 510px;
+			margin-left: 50px;
+			padding: 65px 50px;
+			color: #3E3A39;
+			position: relative;
+			> p {
+				@include fontsize(15);
+				margin-bottom: 30px;
+				text-align: left;
+			}
+		}
+		.box1 {
+			background: url(../images/about_bg01.png) no-repeat center top;
+			margin-left: 0;
+			.price {
+				background: url(../images/detail_under01.png) no-repeat left 90%;
+			}
+		}
+		.box2 {
+			background: url(../images/about_bg02.png) no-repeat center top;
+			margin-left: 50px;
+			> p {
+				margin-top: 45px;
+			}
+			.price {
+				background: url(../images/detail_under02.png) no-repeat center 90%;
+				text-align: center;
+				margin-top: 0;
+				span {
+					padding-left: 110px;
+				}
+			}
+		}
+		.price {
+			@include fontsize(22);
+			margin-bottom: 0;
+			span {
+				@include fontsize(16);
+			}
+		}
+		.detail img {
+			@include absPosition ;
+			top: 0;
+			left: 0;
+			bottom: -75%;
+			right: 0;
+			margin: auto;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+}
+
+/* ---------------------------------
+	thought
+---------------------------------- */
+#thought {
+	text-align: center;
+	background: url(../images/thought_bg.png) no-repeat center top;
+	.contents{
+		width: 1240px;
+		margin: 0 auto;
+		h3 {
+			@include fontsize(26);
+			background: url(../images/lead_thought.png) no-repeat center bottom;
+			margin-bottom: 90px;
+		}
+		p {
+			margin-bottom: 30px;
+			line-height: 2;
+			span {
+				@include fontsize(48);
+				vertical-align: middle;
+			}
+			em {
+				color: #D85335;
+				font-weight: bold;
+			}
+			img {
+				vertical-align: sub;
+			}
+		}
+		dl {
+			width: 730px;
+			margin: 0 auto;
+			text-align: left;
+			overflow: hidden;
+			padding-bottom: 35px;
+			padding-left: 120px;
+		}
+		dt {
+			float: left;
+			clear: both;
+			@include border-radius(50%);
+			width: 30px;
+			height: 30px;
+			padding: 10px;
+			background: #EE8FB8;
+			color: #fff;
+		}
+		dd {
+			margin-left: 45px;
+			line-height: 2;
+		}
+	}
+}
+
+/* ---------------------------------
+	info
+---------------------------------- */
+#info{
+	background: url(../images/info_bg01.png) no-repeat center top;
+	text-align: center;
+	padding-top: 30px;
+	color: #595757;
+	line-height: 1.5;
+	position: relative;
+	.info_logo {
+		@include absPosition;
+		top: -19%;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 301px;
+		height: 153px;
+	}
+	.contents{
+		width: 1240px;
+		margin: 0 auto;
+		h3 {
+			@include fontsize(38);
+			background: url(../images/info_ttlBg.png) no-repeat center 75px;
+			span {
+				@include fontsize(18);
+			}
+		}
+		ul {
+			display: table;
+			width: 100%;
+		}
+		li {
+			display: table-cell;
+			width: 33%;
+			p {
+				@include fontsize(26);
+				line-height: 1.5;
+				span {
+					@include fontsize(18);
+				}
+			}
+			a {
+				@include fontsize(20);
+				color: #ECAA39;
+				text-decoration: none;
+			}
+		}
+		.notice .inner, .faq .inner {
+			.jspContainer {
+				overflow:hidden;
+				position:relative;
+			}
+			.jspPane {
+				position:absolute;
+			}
+			.jspVerticalBar {
+				position:absolute;
+				top:0;
+				right:0;
+				width:10px;
+				height:100%;
+			}
+			.jspTrack {
+				background:#eee;
+				border: 1px solid #ddd; 
+				position:relative;
+			}
+			.jspDrag {
+				position:relative;
+				top:0;
+				left:0;
+				cursor:pointer;
+			}
+		}
+		.notice h4, .faq h4 {
+			@include fontsize(24);
+			margin-bottom: 50px;
+		}
+		.notice {
+			display: table-cell;
+			width: 50%;
+			padding-top: 150px;
+			padding-bottom: 130px;
+			.inner{
+				width: 550px;
+				height: 420px;
+				overflow-y: scroll;
+				overflow-x: hidden;
+				padding-right: 50px;
+				.jspDrag {
+					background:#0080CB;
+				}
+			}
+			dl {
+				width: 500px;
+				margin-bottom: 50px;
+				overflow: hidden;
+			}
+			dt {
+				float: left;
+				clear: both;
+			}
+			dd {
+				@include fontsize(18);
+				margin-left: 195px;
+				text-align: left;
+				span {
+					@include fontsize(15);
+				}
+				a {
+					color: #3E3A39;
+				}
+			}
+		}
+		.faq {
+			display: table-cell;
+			width: 50%;
+			padding-top: 150px;
+			padding-left: 80px;
+			padding-bottom: 130px;
+			h4 {
+				@include fontsize(24);
+				margin-bottom: 50px;
+			}
+			.inner{
+				width: 550px;
+				height: 420px;
+				overflow: auto;
+				padding-right: 50px;
+				.jspDrag {
+					background:#009643;
+				}
+			}
+			dl {
+				width: 500px;
+				padding-left: 50px;
+				&.q {
+					color: #0080CB;
+					margin-bottom: 25px;
+				}
+				&.a {
+					margin-bottom: 60px;
+				}
+			}
+			dt {
+				float: left;
+				clear: both;
+			}
+			dd {
+				margin-left: 60px;
+				padding-top: 4px;
+				text-align: left;
+			}
+			p {
+				text-align: right;
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
