@@ -26,8 +26,7 @@
 
 body {
 	font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-/* 	background: url(../images/bg01.jpg) no-repeat center top;
-	background-size: 100% auto; */
+	background: url(../images/bg01.jpg) no-repeat center top;
 }
 
 /* ---------------------------------
@@ -62,7 +61,7 @@ h3 {
 ---------------------------------- */
 #header {
 	width: 1240px;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 }
 /* ---------------------------------
 	nav
@@ -102,21 +101,21 @@ nav {
 	page-top
 ---------------------------------- */
 #page-top {
-    position: fixed;
-    bottom: 20px;
-    right: 300px;
-    font-size: 77%;
-    z-index: 1;
+	position: fixed;
+	bottom: 20px;
+	right: 300px;
+	font-size: 77%;
+	z-index: 1;
 }
 #page-top a {
-    background: #666;
-    width: 66px;
-    height: 64px;
-    display: block;
-    background: url(../images/page_top.png);
-    text-indent: 100%;
-    overflow: hidden;
-    white-space: nowrap;
+	background: #666;
+	width: 66px;
+	height: 64px;
+	display: block;
+	background: url(../images/page_top.png);
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 

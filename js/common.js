@@ -1,3 +1,18 @@
+//slider
+$('.slider-voice').slick({
+    arrows: false,
+    centerMode: true,
+	autoplay: true,
+	slidesToShow: 3,
+    centerPadding: '20%'
+  });
+
+//scroll
+$(function() {
+        $(".inner").jScrollPane();
+    });
+
+//pagetop
 $(function() {
     var topBtn = $('#page-top');    
     topBtn.hide();

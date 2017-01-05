@@ -2,8 +2,7 @@
 /* ---------------------------------
 	common set
 ---------------------------------- */
-body { font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; /* 	background: url(../images/bg01.jpg) no-repeat center top;
-	background-size: 100% auto; */ }
+body { font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; background: url(../images/bg01.jpg) no-repeat center top; }
 
 /* ---------------------------------
 	heading
@@ -18,7 +17,7 @@ h3 { padding: 10px 0; margin-bottom: 15px; }
 /* ---------------------------------
 	header
 ---------------------------------- */
-#header { width: 1240px; margin: 0 auto; }
+#header { width: 1240px; margin: 0 auto 50px; }
 
 /* ---------------------------------
 	nav
