@@ -1,3 +1,19 @@
+//menu
+$(function() {
+      var navBox = $("nav");
+      navBox.hide();
+      var TargetPos = 185;
+      $(window).scroll( function() {
+         var ScrollPos = $(window).scrollTop();
+         if( ScrollPos > TargetPos ) {
+            navBox.fadeIn();
+         }
+         else {
+            navBox.fadeOut();
+         }
+      });
+   });
+
 //slider
 $('.slider-voice').slick({
     arrows: false,

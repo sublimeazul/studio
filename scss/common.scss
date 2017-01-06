@@ -62,14 +62,132 @@ h3 {
 #header {
 	width: 1240px;
 	margin: 0 auto 50px;
+	position: relative;
+}
+
+/* ---------------------------------
+	topmenu
+---------------------------------- */
+ul#menu {
+	width: 100%;
+	height: 102px;
+	margin-top: 30px;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		height: 36px;
+		position: relative;
+		a {
+			display: block;
+			position: relative;
+			overflow: hidden;
+			height: 36px;
+			background: url(../images/nav.png) no-repeat;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+	#voice {
+		width: 115px;
+		top: 40px;
+		a {
+			background-position: 0 0;
+			&:hover {
+				background-position: 0 -36px;
+			}
+		}
+	}
+	#gallery {
+		width: 120px;
+		top: 48px;
+		a {
+			background-position: -115px 0;
+			&:hover {
+				background-position: -115px -36px;
+			}
+		}
+	}
+	#stores {
+		width: 110px;
+		top: 55px;
+		a {
+			background-position: -235px 0;
+			&:hover {
+				background-position: -235px -36px;
+			}
+		}
+	}
+	#plan {
+		width: 116px;
+		top: 62px;
+		a {
+			background-position: -345px 0;
+			&:hover {
+				background-position: -345px -36px;
+			}
+		}
+	}
+	#staff {
+		width: 133px;
+		top: 70px;
+		a {
+			background-position: -461px 0;
+			&:hover {
+				background-position: -461px -36px;
+			}
+		}
+	}
+	#logos {
+		width: 183px;
+		top: 0;
+	}
+	#flow {
+		width: 116px;
+		top: 70px;
+		a {
+			background-position: -595px 0;
+			&:hover {
+				background-position: -595px -36px;
+			}
+		}
+	}
+	#faq {
+		width: 76px;
+		top: 62px;
+		a {
+			background-position: -711px 0;
+			&:hover {
+				background-position: -711px -36px;
+			}
+		}
+	}
+	#contact {
+		padding-left: 10px;
+		a {
+			background: url(../images/reservation.png) no-repeat;
+			width: 173px;
+			height: 82px;
+		}
+	}
 }
 /* ---------------------------------
-	nav
+	nav-fixed
 ---------------------------------- */
 nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	background: #fff;
+	-moz-box-shadow: 0 0 8px #cacaca;
+	-webkit-box-shadow: 0 0 8px #cacaca;
+	box-shadow: 0 0 8px #cacaca;
 	ul {
 		display: table;
-		width: 100%;
+		width: 1240px;
+		margin: 0 auto;
 		text-align: center;
 		overflow: hidden;
 	}

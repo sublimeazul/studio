@@ -17,12 +17,44 @@ h3 { padding: 10px 0; margin-bottom: 15px; }
 /* ---------------------------------
 	header
 ---------------------------------- */
-#header { width: 1240px; margin: 0 auto 50px; }
+#header { width: 1240px; margin: 0 auto 50px; position: relative; }
 
 /* ---------------------------------
-	nav
+	topmenu
 ---------------------------------- */
-nav ul { display: table; width: 100%; text-align: center; overflow: hidden; }
+ul#menu { width: 100%; height: 102px; margin-top: 30px; }
+ul#menu li { display: inline-block; vertical-align: top; height: 36px; position: relative; }
+ul#menu li a { display: block; position: relative; overflow: hidden; height: 36px; background: url(../images/nav.png) no-repeat; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+ul#menu #voice { width: 115px; top: 40px; }
+ul#menu #voice a { background-position: 0 0; }
+ul#menu #voice a:hover { background-position: 0 -36px; }
+ul#menu #gallery { width: 120px; top: 48px; }
+ul#menu #gallery a { background-position: -115px 0; }
+ul#menu #gallery a:hover { background-position: -115px -36px; }
+ul#menu #stores { width: 110px; top: 55px; }
+ul#menu #stores a { background-position: -235px 0; }
+ul#menu #stores a:hover { background-position: -235px -36px; }
+ul#menu #plan { width: 116px; top: 62px; }
+ul#menu #plan a { background-position: -345px 0; }
+ul#menu #plan a:hover { background-position: -345px -36px; }
+ul#menu #staff { width: 133px; top: 70px; }
+ul#menu #staff a { background-position: -461px 0; }
+ul#menu #staff a:hover { background-position: -461px -36px; }
+ul#menu #logos { width: 183px; top: 0; }
+ul#menu #flow { width: 116px; top: 70px; }
+ul#menu #flow a { background-position: -595px 0; }
+ul#menu #flow a:hover { background-position: -595px -36px; }
+ul#menu #faq { width: 76px; top: 62px; }
+ul#menu #faq a { background-position: -711px 0; }
+ul#menu #faq a:hover { background-position: -711px -36px; }
+ul#menu #contact { padding-left: 10px; }
+ul#menu #contact a { background: url(../images/reservation.png) no-repeat; width: 173px; height: 82px; }
+
+/* ---------------------------------
+	nav-fixed
+---------------------------------- */
+nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 5; background: #fff; -moz-box-shadow: 0 0 8px #cacaca; -webkit-box-shadow: 0 0 8px #cacaca; box-shadow: 0 0 8px #cacaca; }
+nav ul { display: table; width: 1240px; margin: 0 auto; text-align: center; overflow: hidden; }
 nav li { display: table-cell; vertical-align: middle; }
 nav li a { color: #3E3A39; text-decoration: none; }
 nav li.current, nav li:hover { background: url(../images/nav_border.png) no-repeat center 70%; }

@@ -42,6 +42,7 @@
 ---------------------------------- */
 #voices { width: 100%; margin-bottom: 100px; }
 #voices p { text-align: center; }
+#voices .more_voice { margin-top: 30px; }
 
 /* ---------------------------------
 	slider
